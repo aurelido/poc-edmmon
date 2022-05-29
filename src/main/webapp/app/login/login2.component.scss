@@ -1,0 +1,300 @@
+@mixin repeat($character, $n){
+  $c:"";
+  @for $i from 1 through $n {
+    $c: $c + $character;
+  }
+  content: $c;
+}
+
+.dash {
+  @include repeat("-", 20)
+}
+
+.dot:after {
+  @include repeat(".", 20)
+}
+
+.bar::after
+{
+  content: attr(data-content)
+}
+
+.letter {
+  @include repeat(x, 20)
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+/* PublicWebportal screen */
+body.pub-webportal {
+  margin: 0;
+  background-color: #015757;
+}
+input[type="submit"].roundedCorners5,
+input[type="button"].roundedCorners5,
+button.roundedCorners5 {
+  border: 0;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url('/public/share/resources/PIE-2.0beta1/PIE.htc');
+  position: relative;
+}
+.pub-webportal {
+  text-align: left;
+}
+.pub-webportal .noAnchorUnderline a,
+.pub-webportal .noAnchorUnderline a:visited {
+  text-decoration: none;
+}
+.pub-webportal .screenContainer {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.pub-webportal .headerBPL {
+  height: 214px;
+}
+
+.pub-webportal .headerBPL div.headerEast {
+  overflow: auto;
+  background: url('../../content/images/Operations_Login_Large_Icon.png') no-repeat 35px 35px;
+  float: right;
+  width: 400px;
+  height: 100%;
+}
+
+.pub-webportal .headerBPL div.headerNorth {
+  overflow: hidden;
+  background: url('../../content/images/bpl_logo.png') no-repeat 40px 40px;
+  width: 1024px;
+  float: left;
+  position: absolute;
+  z-index: 1;
+}
+.pub-webportal .headerBPL div.corporateSocial {
+  float: right;
+  margin: 20px;
+}
+.pub-webportal .headerBPL div.corporateSocial > div {
+  float: right;
+}
+.pub-webportal .headerBPL div.corporateSocial div.social {
+  padding: 10px;
+  margin-top: 26px;
+  margin-right: 10px;
+}
+.pub-webportal .headerBPL div.corporateSocial div.social span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-left: 10px;
+  overflow: hidden;
+  text-indent: -2000px;
+}
+.pub-webportal .headerBPL div.corporateSocial div.social span.facebook {
+  background: url('/public/images/customization/Common/MS_Portal_general_ui/image03_en.png') no-repeat;
+}
+.pub-webportal .headerBPL div.corporateSocial div.social span.twitter {
+  background: url('/public/images/customization/Common/MS_Portal_general_ui/image04_en.png') no-repeat;
+}
+.pub-webportal .headerBPL div.corporateSocial div.social span.linkedIn {
+  background: url('/public/images/customization/Common/MS_Portal_general_ui/image05_en.png') no-repeat;
+}
+.pub-webportal .headerBPL div.corporateSocial div.about-us {
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 24px;
+}
+.pub-webportal .headerBPL div.corporateSocial div.about-us a,
+.pub-webportal .headerBPL div.corporateSocial div.about-us a:visited {
+  font-size: 18px;
+  color: #fff;
+}
+.pub-webportal .content-center {
+  background: url('../../content/images/Login_Main_Background.png') no-repeat;
+  overflow: auto;
+  padding-top: 20px;
+  min-height: 565px;
+}
+.pub-webportal .content-center .content-box {
+  /*  background-color: #EEE;*/
+  background-color: #018D8D;
+  width: 350px;
+  margin: 10px auto;
+  padding: 20px 40px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url('/public/share/resources/PIE-2.0beta1/PIE.htc');
+  position: relative;
+  -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+.pub-webportal .content-center .content-box * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pub-webportal .content-center .content-box input {
+  height: auto;
+}
+
+.pub-webportal .content-center .content-box h1.headerTitle {
+  background: url('../../content/images/Operations_Login_Small_Icon.png') no-repeat 41px 39px;
+  background-position: right;
+}
+
+.pub-webportal .content-center .content-box > form {
+  margin-bottom: 0;
+}
+.pub-webportal .content-center .content-box > form h1 {
+  color: #FFFFFF;
+  font-size: 38px;
+  font-weight: normal;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+.pub-webportal .content-center .content-box > form div.credentials_table_postheader {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #f5deb3;
+}
+.pub-webportal .content-center .content-box > form .form-group {
+  margin-bottom: 20px;
+}
+.pub-webportal .content-center .content-box > form .form-group label {
+  color: #FFFFFF;
+  font-weight: normal;
+}
+.labelLinks {
+  float: right;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.labelLinks a:link, .labelLinks a:visited {
+  color: #8ED7E3;
+}
+
+.labelLinks a:hover {
+  text-decoration: underline;
+}
+
+.pub-webportal .content-center .content-box > form .form-group span.help-link {
+  float: right;
+  font-size: 12px;
+}
+.pub-webportal .content-center .content-box > form .form-group span.help-link a,
+.pub-webportal .content-center .content-box > form .form-group span.help-link a:visited {
+  color: #0390d9;
+}
+.pub-webportal .content-center .content-box > form .form-group .form-control {
+  display: block;
+  width: 100%;
+  font-size: 17px;
+  padding: 6px 12px;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.pub-webportal .content-center .content-box > form .form-group input.form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pub-webportal .content-center .content-box > form input[type="submit"].credentials_input_submit {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #FF9000;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.pub-webportal .content-center .content-box > form input[type="submit"].credentials_input_submit:hover {
+  background-color: #FF9B19;
+}
+
+.pub-webportal .content-center .content-box > form input[type="submit"].credentials_input_submit:active {
+  background-color: #E68200;
+}
+
+.pub-webportal #header_container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.pub-webportal #header {
+  line-height: 60px;
+  margin: 0 auto;
+  width: 1024px;
+  border: 1px solid red;
+  background: url('../../content/images/image01_en.png') no-repeat;
+}
+.pub-webportal #container {
+  /* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
+
+  margin: 0 auto;
+  overflow: auto;
+  padding: 80px 0;
+  width: 940px;
+}
+
+@media (max-height: 645px) {
+  body,
+  img,
+  div {
+    transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+  }
+  .pub-webportal .content-center {
+    padding-top: 5px;
+  }
+  .pub-webportal .content-center .content-box {
+    margin-top: 0;
+    padding: 10px 40px;
+  }
+  .pub-webportal .content-center .content-box > form h1 {
+    margin-bottom: 10px;
+  }
+  .pub-webportal .content-center .content-box > form .form-group {
+    margin-bottom: 10px;
+  }
+  .pub-webportal .content-center .content-box > form input[type="submit"].credentials_input_submit {
+    margin-top: 0;
+  }
+}
+
+
+/* PLACEHOLDER EDITING*/
+
+::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 1.9em;
+}
+
+:-moz-placeholder {  /*Firefox 18-*/
+  font-size: 12px;
+  line-height: 1.9em;
+}
+
+::-moz-placeholder {   /*Firefox 19+*/
+  font-size: 12px;
+  line-height: 1.9em;
+}
+
+:-ms-input-placeholder {
+  color: #A9A9A9;
+  line-height: 1.3em;
+}
+/* / PublicWebportal screen */

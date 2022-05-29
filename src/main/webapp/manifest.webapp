@@ -1,0 +1,55 @@
+{
+  "name": "Edmmon",
+  "short_name": "Edmmon",
+  "icons": [
+    {
+      "src": "./content/images/logo_Bloomberg_DMS.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./content/images/logo_Bloomberg_DMS.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./content/images/logo_Bloomberg_DMS.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./content/images/logo_Bloomberg_DMS.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./content/images/bpl_iphone.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "src": "./content/images/bpl_ipad.png",
+      "sizes": "76x76",
+      "type": "image/png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "src": "./content/images/bpl_iphoner.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "src": "./content/images/bpl_ipadr.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "rel": "apple-touch-icon"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#e0e0e0",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -1,0 +1,50 @@
+<div>
+  <div class="main-dms d-flex justify-content-center">
+    <div class="content-box col-lg-6 col-md-8 col-sm-10">
+      <h1 dmsTranslate="login.title" data-cy="loginTitle">Sign in</h1>
+      <div class="alert alert-danger" *ngIf="authenticationError" dmsTranslate="login.messages.authentication.error" data-cy="loginError">
+        <strong>Failed to sign in!</strong> Please check your credentials and try again.
+      </div>
+      <form class="form" role="form" (ngSubmit)="login()" [formGroup]="loginForm">
+        <div class="mb-3">
+          <label class="username-label" for="username" dmsTranslate="global.form.username.label">Login</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            id="username"
+            placeholder="{{ 'global.form.username.placeholder' | translate }}"
+            formControlName="username"
+            #username
+            data-cy="username"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" dmsTranslate="login.form.password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="{{ 'login.form.password.placeholder' | translate }}"
+            formControlName="password"
+            data-cy="password"
+          />
+        </div>
+
+        <div class="form-check" hidden>
+          <label class="form-check-label" for="rememberMe">
+            <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe" formControlName="rememberMe" />
+            <span dmsTranslate="login.form.rememberme">Remember me</span>
+          </label>
+        </div>
+
+
+        <div class="form-group" id="submit_row">
+          <input type="submit" class="btn btn-primary" dmsTranslate="login.form.button" value="Sign In" data-cy="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

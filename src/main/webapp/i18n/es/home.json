@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "¡Bienvenido a {{appname}}!",
+    "subtitle": "Esta es su página de inicio",
+    "logged": {
+      "message": "Está conectado como \"{{username}}\"."
+    },
+    "question": "Si tiene preguntas:",
+    "link": {
+      "homepage": "Página de inicio",
+      "privacy": "Privacidad"
+    },
+    "repo": "Encuentra el codigo fuente aqui",
+    "bitbucket": "Bitbucket"
+  }
+}

@@ -1,0 +1,104 @@
+
+
+<!--<body onload="document.loginForm.j_username.focus()" class="pub-webportal logon">-->
+
+<!--<div class="headerContainer baseBackground noAnchorUnderline">-->
+<!--  <div class="screenContainer headerBPL">-->
+<!--    <div class=headerNorth>-->
+<!--      <h1 class="headerTitle">Operations Monitoring</h1>-->
+<!--    </div>-->
+<!--    <div class="headerEast"></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="pub-webportal logon">
+<div class="screenContainer content-center noAnchorUnderline">
+  <div class="content-box">
+<!--    <form role="form" id="auth_form" name="loginForm" method="post" action="j_spring_security_check" autocomplete="off">-->
+    <form class="form" role="form" id="auth_form" name="loginForm" (ngSubmit)="login()" [formGroup]="loginForm" autocomplete="off">
+
+    <h1 class="headerTitle">Login</h1>
+      <div class="credentials_table_postheader" id="message">
+      </div>
+      <div class="credentials_table_postheader" *ngIf="inProgress" data-cy="loginInProgress">
+        <strong class="bar" [attr.data-content]="dots">Logging in</strong>
+      </div>
+      <div class="form-group">
+        <label for="text">Username</label>
+<!--        <input type=text name="j_username" class="form-control credentials_input_text" value="" id="input_1"-->
+<!--               autocomplete="off" autocapitalize="off" tabindex="1" placeholder="Enter Your Username"-->
+<!--               onchange="makeLowercase()">-->
+
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          id="username"
+          placeholder="{{ 'global.form.username.placeholder' | translate }}"
+          formControlName="username"
+          #username
+          data-cy="username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+<!--        <input type=password name="j_password" class="form-control credentials_input_password" value="" id="input_2"-->
+<!--               autocomplete="off" autocapitalize="off" tabindex="2" placeholder="Enter Your Password">-->
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password"
+          placeholder="{{ 'login.form.password.placeholder' | translate }}"
+          formControlName="password"
+          data-cy="password"
+        />
+      </div>
+
+      <div class="form-group" id="submit_row">
+        <input type="submit" class="credentials_input_submit roundedCorners5" value="Login" onclick="showProgress()">
+      </div>
+      <input type=hidden name="vhost" value="standard">
+    </form>
+  </div>
+</div>
+
+</div>
+<!--<script>-->
+<!--  function makeLowercase() {-->
+<!--    document.loginForm.j_username.value = document.loginForm.j_username.value.toLowerCase();-->
+<!--  }-->
+
+<!--  function onEnterKey(loginfield,e){-->
+<!--    var keycode;-->
+<!--    if (window.event)-->
+<!--      keycode = window.event.keyCode;-->
+<!--    else if (e)-->
+<!--      keycode = e.which;-->
+<!--    else-->
+<!--      return true;-->
+
+<!--    if (keycode == 13){-->
+<!--      loginfield.form.submit();-->
+<!--      return false;-->
+<!--    }-->
+<!--    else-->
+<!--      return true;-->
+<!--  }-->
+
+<!--  function showProgress(){-->
+<!--    document.getElementById('message').style.color = '#CCFF99';-->
+<!--    document.getElementById('message').innerHTML = 'Logging in...';-->
+<!--    addDot();-->
+<!--  }-->
+
+<!--  function addDot(){-->
+<!--    if( document.getElementById ('message').innerHTML.length < 40 )-->
+<!--      document.getElementById('message').innerHTML += '.';-->
+<!--    else-->
+<!--      document.getElementById('message').innerHTML = 'Logging in...';-->
+
+<!--    setTimeout("addDot()", 50);-->
+<!--  }-->
+<!--</script>-->

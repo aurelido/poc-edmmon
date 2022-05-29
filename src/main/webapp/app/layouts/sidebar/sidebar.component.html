@@ -1,0 +1,30 @@
+<div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+  <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+    <li class="nav-item">
+      <a class="nav-link py-3 border-bottom rounded-0" routerLink="home" routerLinkActive="active">
+        <fa-icon icon="home" [fixedWidth]="true"></fa-icon>
+      </a>
+    </li>
+    <!-- <li class="nav-item" *dmsHasAnyAuthority="'ROLE_ADMIN'">
+      <a class="nav-link py-3 border-bottom rounded-0" routerLink="admin/metrics" routerLinkActive="active">
+        <fa-icon icon="abacus" [fixedWidth]="true"></fa-icon>
+      </a>
+    </li> -->
+    <li class="nav-item" *dmsHasAnyAuthority="'ROLE_ADMIN'">
+      <a class="nav-link py-3 border-bottom rounded-0" routerLink="admin/health" routerLinkActive="active">
+        <fa-icon icon="heart" [fixedWidth]="true"></fa-icon>
+      </a>
+    </li>
+    <li class="nav-item" *dmsHasAnyAuthority="'ROLE_ADMIN'">
+      <a class="dropdown-item" routerLink="admin/configuration" routerLinkActive="active">
+        <fa-icon icon="cogs" [fixedWidth]="true"></fa-icon>
+      </a>
+    </li>
+    <li class="nav-item" *dmsHasAnyAuthority="'ROLE_ADMIN'">
+      <a class="dropdown-item" routerLink="admin/logs" routerLinkActive="active">
+        <fa-icon icon="tasks" [fixedWidth]="true"></fa-icon>
+      </a>
+    </li>
+  </ul>
+
+</div>

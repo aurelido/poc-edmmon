@@ -1,0 +1,84 @@
+/* ==========================================================================
+Main page styles
+========================================================================== */
+
+.dms {
+  display: inline-block;
+  width: 347px;
+  height: 497px;
+  background: url('../../content/images/image01_en.png') no-repeat center top;
+  background-size: contain;
+}
+
+/* wait autoprefixer update to allow simple generation of high pixel density media query */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (-moz-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .dms {
+    background: url('../../content/images/image01_en.png') no-repeat center top;
+
+  }
+}
+
+.main-dms {
+  padding: 0px 0;
+  display: inline-block;
+  width: 100%;
+  height: 497px;
+  background: #00222A url('../../content/images/image01_en.png') no-repeat center top;
+}
+
+.main-dms .content-box h1 {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 8px 0 0 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+
+.main-dms .content-box {
+  width: 80%;
+  max-width: 91.42857143em;
+  margin: 44px auto 0;
+}
+.main-dms .content-box > img {
+  display: none;
+}
+.main-dms .content-box .card__img-wrap {
+  width: 100%;
+  max-width: 14.78571429em;
+  margin: 0 auto;
+}
+.main-dms .content-box .card__img-wrap > img {
+  width: 100%;
+}
+.main-dms .content-box .form-group {
+  margin-top: 20px;
+  text-align: left;
+}
+.main-dms .content-box .form-group#submit_row {
+  text-align: center;
+}
+.main-dms .content-box .form-group label {
+  display: inline-block;
+  width: 15%;
+  margin-left: 15%;
+  margin-right: 5%;
+}
+.main-dms .content-box .form-group input[type=password],
+.main-dms .content-box .form-group input[type=text] {
+  width: 60%;
+  color: black;
+}
+.main-dms .content-box .form-group > input {
+  border: 1px solid #00222A;
+}
+.main-dms .content-box .form-group input[type=submit] {
+  font-size: 1.1em;
+  background-color: #12A3A3;
+  width: 13.57142857em;
+  height: 2.85714286em;
+}

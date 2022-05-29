@@ -1,0 +1,18 @@
+<dms-page-ribbon></dms-page-ribbon>
+
+<div>
+  <router-outlet name="navbar"></router-outlet>
+</div>
+
+<div>
+  <router-outlet name="sidebar"></router-outlet>
+</div>
+
+<div class="container-fluid">
+
+  <div class="card dms-card">
+    <router-outlet></router-outlet>
+  </div>
+
+  <dms-footer></dms-footer>
+</div>
